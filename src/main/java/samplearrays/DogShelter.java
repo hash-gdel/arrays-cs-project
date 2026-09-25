@@ -28,7 +28,7 @@ public class DogShelter {
 
     // Add count to a given index
     public static void addBreed(int index, int count) {
-        DogShelter.dogCounts[index] =count ;
+        DogShelter.dogCounts[index] +=count ;
     }
 
     // Remove a breed by setting its count to 0
