@@ -2,8 +2,7 @@ package samplearrays;
 
 public class DogShelter {
 
-    // initialize an array of 3
-
+    static int[] dogCounts = new int[3];
 
     public static void main(String[] args) {
 
@@ -29,18 +28,20 @@ public class DogShelter {
 
     // Add count to a given index
     public static void addBreed(int index, int count) {
-        // add you code here
+        DogShelter.dogCounts[index] =count ;
     }
 
     // Remove a breed by setting its count to 0
     public static void deleteBreed(int index) {
-        // add your code here
+        DogShelter.dogCounts[index] =0;
     }
 
     // Display all dog counts
     public static void displayDogs() {
-        // add your code
-          //  System.out.println("Breed " + i + " has " + dogCounts[i] + " dogs.");
+        for (int i=0;i<DogShelter.dogCounts.length;i++){
+            System.out.println("Breed " + i + " has " + dogCounts[i] + " dogs.");
+        }
+
 
     }
 }
