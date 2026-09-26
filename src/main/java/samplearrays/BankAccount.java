@@ -35,7 +35,7 @@ public class BankAccount {
     }
 
     public void displayTransactions(){
-        for(int i=0;i<transactions.length;i++){
+        for(int i=0;i<this.index;i++){
             System.out.println("Transaction number "+(i+1)+" is "+this.transactions[i]);
             System.out.println();
         }
