@@ -122,7 +122,7 @@ public class ManageStudent {
 
         // Print all
         System.out.println("== All Students ==");
-        for (Student s : arr) System.out.println(s);
+        for (Student s : arr) System.out.println(s.toString());
         System.out.println("Total created: " + Student.getNumStudent());
 
         // 2) Oldest
@@ -144,7 +144,7 @@ public class ManageStudent {
         // sort function
         System.out.println("\n== Sorted by grade (desc) ==");
         sortByGradeDesc(arr);
-        for (Student s : arr) System.out.println(s);
+        for (Student s : arr) System.out.println(s.toString());
 
 
         // 7) High achievers >= 15
@@ -165,8 +165,28 @@ public class ManageStudent {
         // 10) Append new student
         Student[] newArr =appendStudent(arr,new Student(6,"Sami"));
         System.out.println("== All Students ==");
-        for (Student s : newArr) System.out.println(s);
+        for (Student s : newArr) System.out.println(s.toString());
+
+        // 11) Represent a school
+        Student[][] school =new Student[2][3];
+        school[0][0] =new Student(1,"Mohammed",20);
+        school[0][1] =new Student(2,"Ahmed",19,14);
+        school[0][2] =new Student(3,"Karim",20);
+        school[1][0] =new Student(4,"Mohammed",20,10);
+        school[1][1] =new Student(5,"Zuleima",20,12);
+        school[1][2] =new Student(6,"Lina",19);
+        System.out.println("Students of class 1: ");
+        for (Student s : school[0]) System.out.println(s.toString());
+        System.out.println("Students of class 2: ");
+        for (Student s : school[1]) System.out.println(s.toString());
+        System.out.println("The top student in class 1 is:");
+        sortByGradeDesc(school[0]);
+        System.out.println(school[0][0].toString());
+        System.out.println("The top student in class 2 is:");
+        sortByGradeDesc(school[1]);
+        System.out.println(school[1][0].toString());
 
     }
+
 }
 
